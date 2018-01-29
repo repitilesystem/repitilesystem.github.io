@@ -1,18 +1,11 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+This is the website for the [RePitile System Project][repisysproj] which aims to create reliable automatic environment-regulating system for reptile enclosures. The system uses a Raspberry Pi to control the environment and adjust it as necessary to create the proper environment for any reptile. 
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+The system is configurable so you can easily switch to a new configuration to meet your reptile's needs in a pinch.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+[repisysproj]: https://github.com/repitilesystem/
