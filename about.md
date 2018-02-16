@@ -16,6 +16,8 @@ Our team consists of 4 CompSci majors: Alex Bioni, Seth Law, Wesley Norris, Scot
 
 Alex Bioni:
 
+&nbsp;&nbsp;&nbsp;&nbsp;Vice president of Tau Kappa Epsilon fraternity, avid fisher, hockey player, and software coder.
+
 Seth Law: 
 
 &nbsp;&nbsp;&nbsp;&nbsp;A graduating senior, avid player of video games, lover of soccer, math and software.
