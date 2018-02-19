@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "Week 3 & 4 Update"
+date:   2018-02-19 00:00:00 -0500
+categories: update
+---
+
+Because of class cancellations and such during week 3, both week 3 & 4 essentially got squashed into the same work-timeframe.
+
+## UI Progress
+
+Seth has been working with the `tkinter` Python library in an attempt to recreate our mockup for the GUI that will be on the touchscreen. It is still very much a WIP, but once the base is set for it we can customize it as we see fit. So far, so good, however. The layout is still be adjusted for the main screen but here's a preview of the progress:
+
+![GUI Progress 1]({{ "/assets/uiprogress1.png" | absolute_url }})
+
+## Core Software
+
+A major decision was made to split the main core software functionality into a library and make a wrapper application around it that will communicate with the GUI through a network layer. This has the added benefit of separating the logic between the two so its much more manageable when changes need to be made. Also, the Rust "crate" system makes this pretty much painless which is a massive plus as we don't need to worry about dependency management, as the Rust build system takes care of it for us.
+
+## Sensors!
+
+We hooked up the sensors we received to test them and got very good results. Here are a few test readings:
+
+![Sensor Readings]({{ "/assets/sensorreadings.png" | absolute_url }})
+
+These values were very sensible and we're happy that they're working! As for incorporating them into our project, we're thinking about using another microcontroller to act as a middleman between reading the sensors, as they have real-time requirements that the Raspberry Pi doesn't lend itself to when running Linux.
