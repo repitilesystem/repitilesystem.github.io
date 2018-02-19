@@ -25,5 +25,5 @@ Wesley Norris:
 &nbsp;&nbsp;&nbsp;&nbsp;A graduating senior with a love of reptiles, programming, and embedded hardware.
 
 Scott Sheppard:
-
+&nbsp;&nbsp;&nbsp;&nbsp;Computer Science and Physics Major, and the president of the Computer Club.
 [repisysproj]: https://github.com/repitilesystem/
