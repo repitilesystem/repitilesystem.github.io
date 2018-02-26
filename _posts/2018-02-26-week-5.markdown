@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "Week 5 Update"
+date:   2018-02-26 00:00:00 -0500
+categories: update
+---
+This week's update features some testing of the UI on the Raspberry Pi and work on the sensor portion of the core software.
+
+## UI on the Pi!
+
+After doing a bit more work on the UI we finally attempted to run it on the Pi itself, and were quite pleased so far! Here's a picture showing the UI on the Pi.
+
+![GUI Progress 1]({{ "/assets/piui.jpg" | absolute_url }})
+
+## Core Software
+
+The most work was done on the core software this week, mainly on the development of the sensor interface between the core and the wrapping application. The major part is the `Sensor` trait which is currently defined as so:
+
+{% highlight rust %}
+pub trait Sensor {
+    type Output;
+    fn read(&self) -> Self::Output;
+    fn temperatue(&self) -> u32;
+    fn humidity(&self) -> u32;
+}
+{% endhighlight %}
+
+This defines a trait (similar to an interface) that describes what functions a sensor has, mainly reading from the sensor, and getting temperature and humidity information. This will allow us to define a sensor type for any one we want and allow it to be usable by the core software. A small example program, [senslink][viewable from this GitHub commit], was written using this trait to show what a very simple sensor implementation might look like.
+
+## Up Next
+
+For the core software, the next bit of work we plan to do is get a simple update loop set up inside the core library that the wrapper application will be able to use and work on getting a simple server set up for communication between the core and UI.
+
+For the UI, work will continue on adding the different screens for configurations and etc, and making it look a little better. 
+
+[senslink]: https://github.com/repitilesystem/repitile_core/blob/9772e3ad0887416a1bc37dc6244711fc32c8607a/src/bin.rs
