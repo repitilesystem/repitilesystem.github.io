@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Week 6 Update"
+date:   2018-03-05 00:00:00 -0500
+categories: update
+---
+This week we've made a lot of progress!
+
+## Reading Sensors
+
+After a long while of wrestling with the data sheets for the sensors, we were finally able to hook them up to the teensy and get the data back from it in much less time! This image shows how the Teensy is connected to the Raspberry Pi:
+
+![Teensy + Pi]({{ "/assets/teensypi.jpg" | absolute_url }})
+
+The Teensy is hooked up to the Raspberry Pi over USB and is interfaced as a serial device. Writing one byte out to the teensy will cause it to read the sensor and report back 5 bytes that are: 16-bit humidity, 16-bit temperature, along with an 8-bit checksum. These values are then sent over serial and act as just a file-read to any program that needs access to the data.
+
+## Wrapper Server Program
+
+We also have had a lot of progress with the wrapping server program that will provide a go-between for the core and UI to communicate! Currently it spins up the core `run` function inside of another thread and can communicate with it via two `sync_channel`s which are provided by the Rust standard library! Here's a preview of some debug output:
+
+![Server]({{ "/assets/serveroutput.PNG" | absolute_url }})
+
+The sensor readings are set in another thread that is repeated on a time delay, so the delay is configurable and able to be as long or short as we need. There's a current conditions variable that will keep track of the current conditions of the environment which is updated after each sensor read.
+
+The messages at the very top are an example of a couple test responses from messages sent to the core lib, replying with a "temperature" and "humidity" dummy values.
+
+## GUI Update!
+
+We were able to figure out a way to have the clock on the main screen update, so now it works as a functional clock! Also, with a lot of hard work, Seth was able to create a way to easily switch between different screens on our UI over the weekend. We have both a main screen, and a very basic alternate "settings" screen (which currently only consists of a button). Here's what it looks like so far:
+
+![UI1]({{ "/assets/uiweek6.png" | absolute_url }})
+
+
+![UI2]({{ "/assets/uiweek6-2.png" | absolute_url }})
