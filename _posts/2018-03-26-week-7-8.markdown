@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Week 7 & 8 Update"
+date:   2018-03-25 00:00:00 -0500
+categories: update
+---
+
+## REST API
+We have the REST API server begun and have it already serving up responses for specific commands, for example:
+
+`repitile_server` debug output
+
+![REST API 1]({{ "/assets/restapi1.png" | absolute_url }})
+
+Requesting the temperature and humidity with `curl`
+
+![REST API 2]({{ "/assets/restapi2.png" | absolute_url }})
+
+Executing these commands from the Python UI is extremely simple, with the help of the `requests` library
+
+```py
+response = requests.get("http://localhost:7878/get/temp")
+print(response.text)
+```
+
+## Continued UI Updates
+
+Progress is being made with the various other screens for the GUI, such as the profile editing screen:
+
+![UI3]({{ "/assets/gui.png" | absolute_url }})
