@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Week 9"
+date:   2018-04-01 00:00:00 -0500
+categories: update
+---
+
+## Back to the Pi
+Unfortunately, due to a power-draw issue with having the Raspberry Pi getting power from the touchscreen and not being able to provide enough power to the Teensy, we had to go back to reading the sensors off of the Pi. While this isn't a big issue, as we managed to find a Rust crate called [dht22_pi][dht22] that gave us the same functionality, it is not as reliable as reading the sensors from the Teensy. Approximately one out of every three to four reads is a failure and has to be restarted, sometimes multiple times in a row. This is definitely ideal, however it is very managable.
+
+## Regulation Working! (Mostly)
+Over the past week we worked on finishing up the few pieces of the core that needed finished, one being the ability to add "regulators" that will be given the current environment details whenever they are updated. This allows for multiple different regulators to all have the same interface for interacting with the outside hardware (such an an LED). More testing needs to be done with it, but its definitely off to a good start.
+
+In this picture: the temperature LED turned on after holding icecubes up to the sensor to lower the temperature below the threshold.
+
+![Regulator Testing]({{ "/assets/reg.jpg" | absolute_url }})
+
+[dht22]: https://crates.io/crates/dht22_pi
