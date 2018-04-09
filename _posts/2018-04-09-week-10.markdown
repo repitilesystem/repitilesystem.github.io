@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Week 10"
+date:   2018-04-09 00:00:00 -0500
+categories: update
+---
+## UI
+While finializing up the rest of the UI frames to use, we've also been giving it a little bit of a facelift to make it a bit more appealing. This work is being done in parallel with the rest of the UI work, and we're making good progress. The UI is expected to be done by the end of next week or so.
+
+![Settings Screen]({{ "/assets/settings.png" | absolute_url }})
+
+## Testing & Integration
+With the core essentially being done, and the UI being very close, the last thing we need to do is testing and integration of the two components. This involves making sure that the UI can properly communicate with the core to load and update profile and config information along with retrieving the correct values.
