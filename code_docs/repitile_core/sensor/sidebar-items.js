@@ -1,0 +1,1 @@
+initSidebarItems({"trait":[["Sensor","Describes a usable sensor. `read` will be called upon the timer ending and triggering a sensor data update. `temperature` and `humidity` both get their respective values which the system will use to make decisions on whether systems should be on or off."]]});

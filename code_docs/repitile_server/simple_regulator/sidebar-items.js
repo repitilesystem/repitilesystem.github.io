@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["SimpleHumidityRegulator","Simple \"regulator\" that enables/disables a humidity indicator LED."],["SimpleTempRegulator","Simple \"regulator\" that enables/disables a temperature indicator LED."]]});

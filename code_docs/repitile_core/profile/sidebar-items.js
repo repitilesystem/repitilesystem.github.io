@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["ProfileError","Profile error possibilities"]],"struct":[["Humidity","Describes the range for acceptable humidity."],["Profile","`Profile` contains all the relevant information for a reptile environment."],["Temps","Describes the range for acceptable temperatures."]]});
